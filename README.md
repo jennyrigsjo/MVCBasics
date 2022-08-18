@@ -3,3 +3,7 @@
 ## Assignment 1 instructions:
 
 https://github.com/jennyrigsjo/MVCBasics/blob/master/MVC%20Basics%20Assignment%201.pdf
+
+## Assignment 2 instructions:
+
+https://github.com/jennyrigsjo/MVCBasics/blob/MVCBasics2/MVC%20Basics%20Assignment%202.pdf
