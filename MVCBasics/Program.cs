@@ -1,12 +1,26 @@
 
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMvc();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(10);
+});
 
 var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseRouting();
+
+
+// enforce use of periods as decimal separator
+var cultureInfo = new CultureInfo("en-US"); 
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 
 app.MapControllerRoute(
     name: "default",
@@ -30,6 +44,12 @@ app.MapControllerRoute(
     name: "projects",
     pattern: "projects",
     defaults: new { controller = "Home", action = "Projects" }
+    );
+
+app.MapControllerRoute(
+    name: "fevercheck",
+    pattern: "fevercheck",
+    defaults: new { controller = "Doctor", action = "FeverCheck" }
     );
 
 app.Run();

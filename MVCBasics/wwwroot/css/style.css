@@ -49,6 +49,7 @@ main {
                 Modules
 **************************************/
 
+/*** Logo ***/
 #logo {
     width: 100px;
     height: 100px;
@@ -58,6 +59,9 @@ main {
     background-position: center;
 }
 
+
+
+/*** Header menu ***/
 header .menu {
     display: flex;
     gap: 1em; /* Add space between children (~70% browser support)*/
@@ -71,6 +75,41 @@ header .menu li:hover a {
     font-weight: bold;
 }
 
+
+
+/*** Fever-check form ***/
+form.fever-check fieldset {
+    margin-bottom: 1em;
+}
+
+form.fever-check .submit {
+    padding: 0.5em 1em;
+    background-color: lightyellow;
+    border-radius: 7px;
+    border: 1px solid lightgoldenrodyellow;
+}
+
+form.fever-check .submit:hover {
+    cursor: pointer;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.message.fever-check.green {
+    color: green;
+}
+
+.message.fever-check.red {
+    color: red;
+}
+
+.message.fever-check.blue {
+    color: blue;
+}
+
+
+
+/*** Footer ***/
 footer {
     min-height: 100px;
     line-height: 100px;
