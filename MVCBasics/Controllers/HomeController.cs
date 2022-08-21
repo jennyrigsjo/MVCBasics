@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCBasics.Models;
 
 namespace MVCBasics.Controllers
 {
@@ -14,8 +15,9 @@ namespace MVCBasics.Controllers
             return View();
         }
 
-        public IActionResult Projects()
+        public async Task<IActionResult> Projects()
         {
+            ViewBag.Repos = await GitHub.GetLatestUserRepos("https://api.github.com/users/jennyrigsjo/repos");
             return View();
         }
     }

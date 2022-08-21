@@ -1,27 +1,24 @@
 ﻿
 @{
     ViewData["Title"] = "Projects";
+    var repos = ViewBag.Repos ?? null;
 }
 
 <h1>Projects I have worked on</h1>
 
 <section class="projects github">
-    <h2>Current GitHub projects</h2>
+    <h2>Latest GitHub projects</h2>
     <ul>
-        <li class="project">
-            <h3 class="heading"><a href="https://github.com/jennyrigsjo/HTMLAndCSSFundamentals">HTMLAndCSSFundamentals</a></h3>
-            <p class="description">Lexicon Assignment 5: Basic HTML Fundamentals and Introduction to CSS</p>
-        </li>
-
-        <li class="project">
-            <h3 class="heading"><a href="https://github.com/jennyrigsjo/VendingMachine">VendingMachine</a></h3>
-            <p class="description">Lexicon Assignment 4: Vending Machine</p>
-        </li>
-
-        <li class="project">
-            <h3 class="heading"><a href="https://github.com/jennyrigsjo/Calculator2">Calculator2</a></h3>
-            <p class="description">Lexicon Assignment 3: Calculator with xUnit tests</p>
-        </li>
+        @if (repos != null)
+        {
+            foreach (var repo in repos)
+            {
+                <li class="project">
+                    <h3 class="heading"><a href="@repo.Url">@repo.Name</a></h3>
+                    <p class="description">@repo.Description</p>
+                </li>
+            }
+        }
     </ul>
 </section>
 
