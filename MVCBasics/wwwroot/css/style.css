@@ -109,6 +109,21 @@ form.fever-check .submit:hover {
 
 
 
+/* Guessing game page */
+.message-container.guess-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dotted blue;
+    padding: 1em;
+}
+
+form.guess-number fieldset {
+    margin-bottom: 1em;
+}
+
+
+
 /*** Footer ***/
 footer {
     min-height: 100px;
