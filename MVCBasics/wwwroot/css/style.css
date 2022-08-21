@@ -18,6 +18,10 @@ body {
     color: var(--main-text-color);
 }
 
+h1 {
+    margin-bottom: 1em;
+}
+
 ul {
     list-style-type: none;
 }
@@ -41,6 +45,10 @@ header {
 
 main {
     margin-bottom: 3em;
+}
+
+.contact, .projects, .resume {
+    margin-bottom: 2em;
 }
 
 
@@ -77,7 +85,7 @@ header .menu li:hover a {
 
 
 
-/*** Fever-check form ***/
+/*** Fever Check page ***/
 form.fever-check fieldset {
     margin-bottom: 1em;
 }
@@ -109,7 +117,7 @@ form.fever-check .submit:hover {
 
 
 
-/* Guessing game page */
+/*** Guessing Game page ***/
 .message-container.guess-number {
     display: flex;
     justify-content: space-between;
