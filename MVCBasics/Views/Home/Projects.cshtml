@@ -6,21 +6,21 @@
 
 <h1>Projects I have worked on</h1>
 
-<section class="projects github">
-    <h2>Latest GitHub projects</h2>
-    <ul>
-        @if (repos != null)
-        {
-            foreach (var repo in repos)
+@if (repos != null)
+{
+    <section class="projects github">
+        <h2>Latest GitHub projects</h2>
+        <ul>
+            @foreach (var repo in repos)
             {
                 <li class="project">
                     <h3 class="heading"><a href="@repo.Url">@repo.Name</a></h3>
                     <p class="description">@repo.Description</p>
                 </li>
             }
-        }
-    </ul>
-</section>
+        </ul>
+    </section>
+}
 
 <section class="projects freelance">
     <h2>Websites I have built</h2>
