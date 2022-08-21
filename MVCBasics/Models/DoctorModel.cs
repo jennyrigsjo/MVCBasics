@@ -1,6 +1,6 @@
 ﻿namespace MVCBasics.Models
 {
-    public class Doctor
+    public static class DoctorModel
     {
         private readonly static double FeverTemp = 37.6;
 

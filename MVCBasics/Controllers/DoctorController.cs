@@ -18,10 +18,10 @@ namespace MVCBasics.Controllers
             ViewBag.Temp = temp;
             ViewBag.Scale = scale;
 
-            temp = (scale == "fahrenheit") ? Doctor.FahrenheitToCelsius(temp) : temp;
+            temp = (scale == "fahrenheit") ? DoctorModel.FahrenheitToCelsius(temp) : temp;
 
-            ViewBag.Message = Doctor.CheckFever(temp);
-            ViewBag.Color = Doctor.GetTemperatureColor(temp);
+            ViewBag.Message = DoctorModel.CheckFever(temp);
+            ViewBag.Color = DoctorModel.GetTemperatureColor(temp);
 
             return View();
         }
