@@ -1,11 +1,11 @@
 ﻿@{
-    string[] links = new string[]
+    Dictionary<string, string> links = new()
     {
-        "about",
-        "contact",
-        "projects",
-        "fevercheck",
-        "guessinggame",
+        {"About", "about"},
+        {"Contact", "contact"},
+        {"Projects", "projects"},
+        {"Fever Check", "fevercheck"},
+        {"Guessing Game", "guessinggame"},
     };
 
     string title = $"{ViewBag.Title} | Jenny Rigsjö";
@@ -30,11 +30,10 @@
                 </a>
                <nav >
                     <ul class="menu">
-                        @foreach (string link in links)
+                        @foreach (KeyValuePair<string, string> link in links)
                         {
-                            string href = $"/{link}";
-                            string name = App_Code_Shared.CapitalizeFirstLetter(link);
-                            <li><a href=@href>@name</a></li>
+                            string href = $"/{link.Value}";
+                            <li><a href=@href>@link.Key</a></li>
                         }
                    </ul>
                </nav>
